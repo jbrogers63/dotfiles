@@ -1,0 +1,15 @@
+# colored GCC warnings and errors
+export GCC_COLORS='error=02;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# Set user's applications home folder
+export APPLICATIONS=$HOME/Applications
+
+# Set tools folder for various build tools/languages
+export TOOLS=$HOME/tools
+
+# Set individual folders for JetBrains apps.
+# Change versions by changing symlink.
+export IDEA_HOME=$APPLICATIONS/idea
+export RUBYMINE_HOME=$APPLICATIONS/rubymine
+
+

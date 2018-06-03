@@ -39,12 +39,14 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# colored GCC warnings and errors
-export GCC_COLORS='error=02;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
+# Keep user config from polluting the whole system.
+# All configs, apps, toolchains, etc will be confined
+# to the user's home folder.
 BASH_CONFIG_FILES=(
 $HOME/.bash_aliases
 $HOME/.bash_prompt
+$HOME/.bash_variables
+$HOME/.bash_path
 )
 
 for file in ${BASH_CONFIG_FILES[@]}; do
@@ -53,8 +55,3 @@ for file in ${BASH_CONFIG_FILES[@]}; do
   fi
 done
 
-IDEA_HOME=$HOME/Applications/idea
-RUBYMINE_HOME=$HOME/Applications/rubymine
-
-export PATH=$HOME/scripts:$PATH:$RUBYMINE_HOME/bin:$IDEA_HOME/bin
-export PATH=$PATH:$HOME/.git-radar
