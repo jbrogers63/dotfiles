@@ -13,6 +13,8 @@ set expandtab       " Convert tabs to spaces
 set number          " Show line numbers
 set showmatch       " Show matching brackets.
 set ignorecase      " Do case insensitive matching
+set backupdir=/tmp  " Set the backup directory
+set directory=/tmp  " Set the working directory
 "set showcmd        " Show (partial) command in status line.
 "set smartcase      " Do smart case matching
 "set incsearch      " Incremental search
