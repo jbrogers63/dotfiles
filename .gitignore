@@ -2,3 +2,5 @@
 *.bak
 *.tmp
 *~
+.env
+.gems
