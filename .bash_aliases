@@ -8,7 +8,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ll='ls -lh'
+alias ll='ls -alh'
 alias la='ls -A'
 
 alias tm="tmux-up"
