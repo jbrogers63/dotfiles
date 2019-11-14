@@ -15,7 +15,8 @@ set showmatch       " Show matching brackets.
 set ignorecase      " Do case insensitive matching
 set backupdir=/tmp  " Set the backup directory
 set directory=/tmp  " Set the working directory
-"set showcmd        " Show (partial) command in status line.
+set cursorline      " Highlight the current line
+set showcmd         " Show (partial) command in status line.
 "set smartcase      " Do smart case matching
 "set incsearch      " Incremental search
 "set autowrite      " Automatically save before commands like :next and :make
@@ -27,4 +28,16 @@ set directory=/tmp  " Set the working directory
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+
+" Need to do the following in order to use vim-plug:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'vim-ruby/vim-ruby'
+call plug#end()
 
