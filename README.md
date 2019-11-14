@@ -2,6 +2,13 @@
 ### Why?
 I need a place to store my dotfiles, so that I don't go crazy trying to reconfigure everything. :)
 
+### Installation
+The bash configs are finnicky. I haven't sorted out a proper way to call the scripts anywhere and have them work properly. For now, the installation location is hardcoded in the bashrc file and installation is expected to be in ```$HOME```.
+
+```shell
+git clone https://github.com/jbrogers63/dotfiles $HOME/.dotfiles
+```
+
 ### Sections
 ##### Bash Configs
 Bash configs are broken out into different files to facilitate ease of management:
