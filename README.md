@@ -7,6 +7,7 @@ The bash configs are finnicky. I haven't sorted out a proper way to call the scr
 
 ```shell
 git clone https://github.com/jbrogers63/dotfiles $HOME/.dotfiles
+echo "source $HOME/.dotfiles/bashrc" >> .bashrc
 ```
 
 ### Sections
