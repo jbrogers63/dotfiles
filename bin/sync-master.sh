@@ -1,13 +1,11 @@
 #!/bin/bash
 
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+source ${SCRIPT_DIR}/common.sh
+
 me=$(basename "$0")
 
 bins=( git gh )
-
-function die() {
-	echo "$@"
-	exit 1
-}
 
 for b in ${bins[@]}; do
 	which -s ${b} || die "${b} is required, but not available."

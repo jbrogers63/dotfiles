@@ -1,5 +1,8 @@
 #!/bin/bash
 
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+source ${SCRIPT_DIR}/common.sh
+
 me=$(basename "$0")
 doit=
 kvm_root=/var/lib/kvm
@@ -14,11 +17,6 @@ name=
 image=
 release=trixie
 distro=debian
-
-function die() {
-	echo "$@"
-	exit 1
-}
 
 function map_debian_release() {
 	local rel=$1
